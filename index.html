@@ -102,6 +102,7 @@ window.__resources = {
                 <div style="flex:1 1 260px; display:flex; align-items:center; gap:10px; height:52px; padding:0 16px; border-radius:14px; background:#fff; color:#6B6057; font:400 15px/1 'Be Vietnam Pro';"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6057" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"></path></svg><input value="{{ pasteUrl }}" onInput="{{ onPasteUrl }}" placeholder="Dán link sản phẩm vào đây…" style="flex:1; border:none; outline:none; background:transparent; min-width:0; font:inherit; color:#2A211B;" /></div>
                 <span onClick="{{ goCheckWithPaste }}" style="flex:var(--ctaGrow); height:52px; padding:0 26px; border-radius:14px; background:#2A211B; color:#fff; font:700 16px/1 'Be Vietnam Pro'; display:grid; place-items:center; white-space:nowrap; cursor:pointer;">Xem tiền hoàn</span>
               </div>
+              <sc-if value="{{ loggedOut }}" hint-placeholder-val="{{ false }}"><div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; font:500 14px/1.4 'Be Vietnam Pro'; color:#5B2408;"><span style="white-space:nowrap;">Dán link <span style="color:#7A2A08; opacity:.55;">→</span> mua như thường <span style="color:#7A2A08; opacity:.55;">→</span> tiền về ví</span><span onClick="{{ go.howto }}" style="font-weight:700; color:#2A211B; text-decoration:underline; text-decoration-thickness:1.5px; text-underline-offset:3px; cursor:pointer; white-space:nowrap;">Xem cách hoạt động</span></div></sc-if>
             </div>
             <div style="display:var(--desk); flex-direction:column; align-items:center; gap:16px; position:relative;">
               <img src="img/xu-chao.svg" alt="" width="300" height="300" style="width:300px; height:auto; display:block; filter:drop-shadow(0 18px 34px rgba(42,33,27,.18));">
@@ -113,7 +114,7 @@ window.__resources = {
         <!-- Việc 5: dải vàng đặc -> một dòng mực trên nền trắng viền sand. Campaign là
              thông tin phụ, không được tranh sức nặng với hero. -->
         <div style="margin:12px var(--pad) 0; min-height:48px; padding:10px 18px; border-radius:12px; background:#fff; border:1px solid #F1E9DC; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;">
-          <div style="display:flex; align-items:center; gap:10px; min-width:0;"><span style="flex-shrink:0; width:7px; height:7px; border-radius:99px; background:#FF5A1F;"></span><span style="font:500 14px/1.4 'Be Vietnam Pro'; color:#2A211B;">Siêu sale 9.9 — <b style="font-weight:700; color:#A63310;">nhân đôi tiền hoàn</b> hôm nay</span></div>
+          <div style="display:flex; align-items:center; gap:10px; min-width:0;"><span style="flex-shrink:0; width:7px; height:7px; border-radius:99px; background:#FF5A1F;"></span><span style="font:500 14px/1.4 'Be Vietnam Pro'; color:#2A211B;">Siêu sale 9.9 — <b style="font-weight:700; color:#A63310;">nhân đôi tiền hoàn</b></span></div>
           <span style="font:600 13px/1 'Be Vietnam Pro'; color:#6B6057; font-variant-numeric:tabular-nums; white-space:nowrap;">còn 04:12:33</span>
         </div>
         </sc-if>
@@ -177,19 +178,6 @@ window.__resources = {
             </sc-for>
           </div>
           </sc-if>
-        </div>
-        <!-- Intro nằm TRÊN, ba bước cùng một hàng. Trước đây intro chiếm ô đầu của
-             lưới 3 cột nên bước 03 rơi xuống hàng hai một mình. -->
-        <div style="margin:var(--secpad) var(--pad) 0; padding:var(--secpad); border-radius:var(--r); background:#FFE1D2; display:flex; flex-direction:column; gap:28px;">
-          <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-            <div style="display:flex; flex-direction:column; gap:10px; max-width:560px;"><span style="font:600 12px/1 'Be Vietnam Pro'; color:#2F5D50; letter-spacing:.14em; text-transform:uppercase;">Cách hoạt động</span><h2 style="margin:0; font:800 var(--h2)/1.1 'Bricolage Grotesque'; letter-spacing:-.03em; text-wrap:balance; min-width:0;">Ba bước, không có bước thừa</h2><p style="margin:0; font:400 15px/1.55 'Be Vietnam Pro'; color:#5B4F45;">Săn deal hot mỗi ngày, nhận hoàn tiền cho mỗi đơn hợp lệ, đổi voucher ngay trong tài khoản.</p></div>
-            <span onClick="{{ go.howto }}" style="font:600 14px/1 'Be Vietnam Pro'; color:#A63310; cursor:pointer; white-space:nowrap;">Cách hoàn tiền hoạt động →</span>
-          </div>
-          <div style="display:grid; grid-template-columns:var(--cols3); gap:{{ stepGap }};">
-            <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
-              <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:2px solid #2A211B;"><span style="font:800 {{ stepNum }}/1 'Bricolage Grotesque'; color:#FF5A1F; letter-spacing:-.03em;">{{ s.n }}</span><div style="display:flex; flex-direction:column; gap:5px; min-width:0;"><span style="font:700 16px/1.3 'Be Vietnam Pro';">{{ s.t }}</span><span style="font:400 14px/1.5 'Be Vietnam Pro'; color:#6B6057;">{{ s.d }}</span></div></div>
-            </sc-for>
-          </div>
         </div>
       </div></sc-if>
 
@@ -1285,7 +1273,7 @@ class Component extends DCLogic {
       frameShadow: cm ? 'none' : '0 24px 80px rgba(0,0,0,.28), 0 0 0 1px rgba(0,0,0,.1)',
       chromeShow: cm ? 'none' : 'flex', chromeGap: cm ? '0' : '20px',
       chromePad: cm ? '0' : '20px 20px 60px', pageBg: cm ? '#fff' : 'transparent', pad: m ? '16px' : '120px', padN: '16px', secpad: m ? '32px' : '48px', heropad: m ? '20px' : '48px', ctaGrow: m ? '1 1 100%' : '0 1 auto', radius: m ? '24px' : '32px',
-      cols5: m ? 'repeat(2, minmax(0,1fr))' : 'repeat(5, minmax(0,1fr))', cols4: m ? 'repeat(2, minmax(0,1fr))' : 'repeat(4, minmax(0,1fr))', cardGap: m ? '12px' : '20px', stepGap: m ? '20px' : '28px', stepNum: m ? '44px' : '64px',
+      cols5: m ? 'repeat(2, minmax(0,1fr))' : 'repeat(5, minmax(0,1fr))', cols4: m ? 'repeat(2, minmax(0,1fr))' : 'repeat(4, minmax(0,1fr))', cardGap: m ? '12px' : '20px', 
       // cột sản phẩm cố định 360px, cột tiền co giãn: trước đây chia đôi 1fr/1fr nên
       // nửa trái bị kéo cao mà chỉ dùng một góc nhỏ.
       checkCols: m ? '1fr' : '360px minmax(0,1fr)', recheckGrow: m ? '1 1 140px' : '0 1 auto',
