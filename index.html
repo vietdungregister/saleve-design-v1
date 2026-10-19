@@ -204,8 +204,9 @@ window.__resources = {
               <div style="display:flex; gap:8px; flex-wrap:wrap;"><span onClick="{{ go.orders }}" style="flex:1 1 180px; height:52px; border-radius:14px; background:#C84318; color:#fff; font:700 15px/1 'Be Vietnam Pro'; display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer;">Mở Shopee &amp; mua ngay<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M14 4h6v6M20 4l-8 8"></path></svg></span><span onClick="{{ act.copy }}" style="height:52px; padding:0 18px; border-radius:14px; background:#fff; color:#5B4F45; font:600 14px/1 'Be Vietnam Pro'; display:grid; place-items:center; border:1px solid #EFE7DB; cursor:pointer;" style-hover="background:#F1E9DC;">Sao chép link</span></div>
               <div style="display:flex; flex-direction:column; border-radius:12px; background:#fff; overflow:hidden; font:500 13px/1 'Be Vietnam Pro';">
                 <div style="display:flex; justify-content:space-between; gap:10px; padding:11px 14px; border-bottom:1px solid #F2ECE4;"><span style="color:#6B6057;">Hoa hồng sàn (Điện gia dụng)</span><b style="white-space:nowrap;">8,5% · 22.000đ</b></div>
-                <div style="display:flex; justify-content:space-between; gap:10px; padding:11px 14px; border-bottom:1px solid #F2ECE4;"><span style="color:#6B6057;">Phần bạn nhận (hạng Bạc)</span><b>80%</b></div>
-                <div style="display:flex; justify-content:space-between; gap:10px; padding:11px 14px;"><span style="color:#6B6057;">Tính trên giá sau voucher</span><b style="color:#A63310;">≈ 17.600đ</b></div>
+                <div style="display:flex; justify-content:space-between; gap:10px; padding:11px 14px; border-bottom:1px solid #F2ECE4;"><span style="color:#6B6057;">Phần bạn nhận</span><b>80%</b></div>
+                <div style="display:flex; justify-content:space-between; gap:10px; padding:11px 14px; border-bottom:1px solid #F2ECE4;"><span style="color:#6B6057;">Tính trên giá sau voucher</span><b style="color:#A63310;">≈ 17.600đ</b></div>
+                <div style="display:flex; justify-content:space-between; gap:10px; padding:11px 14px;"><span style="color:#6B6057;">Voucher thưởng đã lưu · đơn đầu tiên</span><b style="color:#2F5D50;">+20.000đ</b></div>
               </div>
               <span style="font:400 12px/1.5 'Be Vietnam Pro'; color:#6B6057;">Đơn ghi nhận sau 24–48h · Rút được sau khi sàn duyệt.</span>
             </div>
@@ -266,7 +267,7 @@ window.__resources = {
               </div>
               <div style="padding:20px; border-radius:18px; background:#FFE1D2; display:flex; flex-direction:column; gap:12px;">
                 <div style="display:flex; align-items:baseline; justify-content:space-between; gap:10px; flex-wrap:wrap;"><span style="font:600 12px/1 'Be Vietnam Pro'; color:#A63310; letter-spacing:.06em; text-transform:uppercase;">Hoàn tiền về ví</span><span style="font:700 32px/1.15 'Bricolage Grotesque'; color:#A63310;">{{ sel.cash }}</span></div>
-                <div style="display:flex; justify-content:space-between; gap:10px; font:500 13px/1.4 'Be Vietnam Pro'; color:#6B6057; flex-wrap:wrap;"><span>Hoa hồng sàn 8,5% · bạn nhận 80% (hạng Bạc)</span><span onClick="{{ go.howto }}" style="color:#A63310; font-weight:700; cursor:pointer;">Cách tính?</span></div>
+                <div style="display:flex; justify-content:space-between; gap:10px; font:500 13px/1.4 'Be Vietnam Pro'; color:#6B6057; flex-wrap:wrap;"><span>Hoa hồng sàn 8,5% · bạn nhận 80%</span><span onClick="{{ go.howto }}" style="color:#A63310; font-weight:700; cursor:pointer;">Cách tính?</span></div>
                 <span onClick="{{ go.orders }}" style="height:56px; border-radius:16px; background:#C84318; color:#fff; font:800 16px/1 'Be Vietnam Pro'; display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer;">Mở {{ sel.san }} &amp; mua ngay<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M14 4h6v6M20 4l-8 8"></path></svg></span>
                 <div style="display:flex; gap:8px; flex-wrap:wrap;"><span onClick="{{ act.copy }}" style="flex:1; height:44px; border-radius:12px; background:#fff; border:1px solid #2A211B; font:700 13px/1 'Be Vietnam Pro'; display:grid; place-items:center; cursor:pointer;">Sao chép link</span><span onClick="{{ act.share }}" style="flex:1; height:44px; border-radius:12px; background:#fff; border:1px solid #2A211B; font:700 13px/1 'Be Vietnam Pro'; display:grid; place-items:center; cursor:pointer;">Chia sẻ</span></div>
               </div>
@@ -285,11 +286,8 @@ window.__resources = {
       <sc-if value="{{ is.vouchers }}" hint-placeholder-val="{{ false }}"><div data-shot="vouchers" style="border-bottom:var(--shotline);">
         <div style="max-width:var(--wrapPage); margin:0 auto; padding:var(--secpad) var(--pad); display:flex; flex-direction:column; gap:18px;">
           <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;">
-            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; flex-direction:column; gap:8px;"><span style="font:600 12px/1 'Be Vietnam Pro'; color:#2F5D50; letter-spacing:.14em; text-transform:uppercase;">02 · Ưu đãi</span><h1 style="margin:0; font:800 var(--h2)/1.1 'Bricolage Grotesque'; letter-spacing:-.03em; text-wrap:balance; min-width:0;">Voucher hôm nay</h1></div><span style="font:400 13px/1 'Be Vietnam Pro'; color:#6B6057;">Lưu trước — mã tự áp khi bạn mua qua link</span></div>
-            <div style="display:flex; gap:6px; flex-wrap:wrap;"><span style="padding:9px 12px; border-radius:99px; background:#2A211B; color:#fff; font:600 12px/1 'Be Vietnam Pro';">Tất cả</span><span style="padding:9px 12px; border-radius:99px; background:#FFE1D2; font:500 12px/1 'Be Vietnam Pro';">Shopee</span><span style="padding:9px 12px; border-radius:99px; background:#FFE1D2; font:500 12px/1 'Be Vietnam Pro';">TikTok Shop</span><span style="padding:9px 12px; border-radius:99px; background:#FFE1D2; font:500 12px/1 'Be Vietnam Pro';">Freeship</span></div>
-          </div>
-          <div style="display:grid; grid-template-columns:var(--cols4); gap:10px;">
-            <sc-for list="{{ slots }}" as="s" hint-placeholder-count="4"><div onClick="{{ s.pick }}" style="cursor:pointer; padding:14px; border-radius:16px; background:{{ s.bg }}; color:{{ s.fg }}; display:flex; flex-direction:column; gap:4px;"><span style="font:700 20px/1.2 'Bricolage Grotesque';">{{ s.time }}</span><span style="font:600 12px/1.3 'Be Vietnam Pro';">{{ s.label }}</span></div></sc-for>
+            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; flex-direction:column; gap:8px;"><span style="font:600 12px/1 'Be Vietnam Pro'; color:#2F5D50; letter-spacing:.14em; text-transform:uppercase;">02 · Ưu đãi</span><h1 style="margin:0; font:800 var(--h2)/1.1 'Bricolage Grotesque'; letter-spacing:-.03em; text-wrap:balance; min-width:0;">Voucher thưởng</h1></div><span style="font:400 13px/1 'Be Vietnam Pro'; color:#6B6057;">Lưu trước khi mua — thưởng cộng thêm vào tiền hoàn</span></div>
+            <div style="display:flex; gap:6px; flex-wrap:wrap;"><span style="padding:9px 12px; border-radius:99px; background:#2A211B; color:#fff; font:600 12px/1 'Be Vietnam Pro';">Tất cả</span><span style="padding:9px 12px; border-radius:99px; background:#FFE1D2; font:500 12px/1 'Be Vietnam Pro';">Đã lưu</span></div>
           </div>
           <div style="display:grid; grid-template-columns:var(--cols3); gap:14px;">
             <sc-for list="{{ vouchers }}" as="v" hint-placeholder-count="6"><dc-import name="VoucherCard" v="{{ v }}" hint-size="100%,132px"></dc-import></sc-for>
@@ -427,7 +425,7 @@ window.__resources = {
             <div style="padding:18px; border-radius:18px; background:#FFE1D2; display:flex; flex-direction:column; gap:8px; font:500 13px/1.3 'Be Vietnam Pro';">
               <div style="display:flex; justify-content:space-between;"><span style="color:#6B6057;">Giá đơn (sau voucher)</span><b>{{ selOrder.orderValue }}</b></div>
               <div style="display:flex; justify-content:space-between;"><span style="color:#6B6057;">Hoa hồng sàn</span><b>8,5%</b></div>
-              <div style="display:flex; justify-content:space-between;"><span style="color:#6B6057;">Bạn nhận (hạng Bạc)</span><b>80%</b></div>
+              <div style="display:flex; justify-content:space-between;"><span style="color:#6B6057;">Bạn nhận</span><b>80%</b></div>
               <div style="display:flex; justify-content:space-between; padding-top:8px; border-top:1px dashed #FFCDB8;"><span style="font-weight:700;">Tiền hoàn</span><b style="font:700 20px/1.2 'Bricolage Grotesque'; color:{{ selOrder.amtColor }};">{{ selOrder.amt }}</b></div>
             </div>
           </div>
@@ -482,7 +480,7 @@ window.__resources = {
       <sc-if value="{{ is.referral }}" hint-placeholder-val="{{ false }}"><div data-shot="referral" style="border-bottom:var(--shotline);">
         <div style="max-width:var(--wrapWide); margin:0 auto; padding:var(--secpad) var(--pad); display:flex; flex-direction:column; gap:20px;">
           <div style="padding:var(--secpad); border-radius:var(--r); background:#FF5A1F; color:#2A211B; display:grid; grid-template-columns:var(--cols2); gap:24px; align-items:center;">
-            <div style="display:flex; flex-direction:column; gap:12px;"><h1 style="margin:0; font:800 var(--h1)/1.05 'Bricolage Grotesque'; letter-spacing:-.03em; text-wrap:balance;">Mời bạn, nhận 20.000đ mỗi người</h1><p style="margin:0; font:500 15px/1.5 'Be Vietnam Pro'; color:rgba(255,255,255,.92);">Bạn của bạn nhận thêm 10.000đ ở đơn đầu. Thưởng về ví sau khi đơn đầu của họ được duyệt.</p></div>
+            <div style="display:flex; flex-direction:column; gap:12px;"><h1 style="margin:0; font:800 var(--h1)/1.05 'Bricolage Grotesque'; letter-spacing:-.03em; text-wrap:balance;">Mời bạn bè dùng salevề</h1><p style="margin:0; font:500 15px/1.5 'Be Vietnam Pro'; color:rgba(255,255,255,.92);">Gửi mã hoặc link cho bạn bè để cùng mua hàng có hoàn tiền.</p></div>
             <div style="padding:20px; border-radius:18px; background:#fff; color:#2A211B; display:flex; flex-direction:column; gap:12px;"><span style="font:600 11px/1 'Be Vietnam Pro'; color:#6B6057; letter-spacing:.06em; text-transform:uppercase;">Mã giới thiệu của bạn</span><div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 12px 12px 16px; border-radius:14px; background:#FFE1D2; border:1px dashed #FFAE8A;"><span style="font:700 20px/1.2 'Bricolage Grotesque'; letter-spacing:.02em; min-width:0;">SALEVE-AN92</span><span onClick="{{ act.copyCode }}" style="flex-shrink:0; display:flex; align-items:center; gap:6px; padding:9px 13px; border-radius:99px; background:#fff; border:1px solid #EFE7DB; font:600 12px/1 'Be Vietnam Pro'; color:#2A211B; cursor:pointer; white-space:nowrap;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2A211B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9h10v10a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zM5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"></path></svg>Sao chép</span></div><div style="display:flex; gap:8px;"><span onClick="{{ act.share }}" style="flex:1; height:44px; border-radius:12px; background:#2A211B; color:#fff; font:700 13px/1 'Be Vietnam Pro'; display:grid; place-items:center; cursor:pointer;">Chia sẻ Zalo</span><span onClick="{{ act.copyCode }}" style="flex:1; height:44px; border-radius:12px; background:#FFE1D2; color:#A63310; font:700 13px/1 'Be Vietnam Pro'; display:grid; place-items:center; cursor:pointer;">Chia sẻ link</span></div></div>
           </div>
           <div style="display:grid; grid-template-columns:var(--cols3); gap:12px;">
@@ -519,7 +517,6 @@ window.__resources = {
           <div style="padding:22px; border-radius:var(--r); background:#2A211B; color:#fff; display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
             <span style="width:64px; height:64px; border-radius:99px; background:#FF5A1F; display:grid; place-items:center; font:700 26px/1.2 'Bricolage Grotesque';">A</span>
             <div style="flex:1 1 200px; display:flex; flex-direction:column; gap:6px;"><span style="font:700 22px/1.2 'Bricolage Grotesque';">Nguyễn Văn An</span><div style="display:flex; flex-direction:column; gap:3px;"><span style="font:400 13px/1.4 'Be Vietnam Pro'; color:#B5ADA2;">0912 *** 482</span><span style="font:400 13px/1.4 'Be Vietnam Pro'; color:#B5ADA2;">Thành viên từ 03/2026</span></div></div>
-            <div style="flex:1 1 220px; display:flex; flex-direction:column; gap:8px;"><div style="display:flex; justify-content:space-between; font:600 12px/1 'Be Vietnam Pro';"><span style="color:#FFCDB8;">Hạng Bạc · nhận 80%</span><span style="color:#9C9488;">Vàng · 85% sau 12 đơn</span></div><div style="height:8px; border-radius:99px; background:rgba(255,255,255,.15); overflow:hidden;"><div style="width:62%; height:100%; background:#FF5A1F; border-radius:99px;"></div></div></div>
           </div>
           <sc-for list="{{ accountGroups }}" as="grp" hint-placeholder-count="3">
             <div style="display:flex; flex-direction:column; gap:10px;">
@@ -648,7 +645,7 @@ window.__resources = {
 
           <div style="border-radius:18px; background:#fff; border:1.5px solid #FFE1D2; padding:18px; display:flex; flex-direction:column; gap:10px;">
             <span style="font:700 15px/1.3 'Bricolage Grotesque'; color:#A63310;">Xoá tài khoản</span>
-            <span style="font:400 13px/1.5 'Be Vietnam Pro'; color:#6B6057;">Toàn bộ dữ liệu cá nhân, lịch sử đơn và thông tin ngân hàng sẽ bị xoá vĩnh viễn. <b style="color:#A63310;">Số dư chưa rút sẽ mất.</b> Hãy rút hết tiền trước khi xoá.</span>
+            <span style="font:400 13px/1.5 'Be Vietnam Pro'; color:#6B6057;">Muốn xoá tài khoản, bạn liên hệ hỗ trợ. Tụi mình sẽ giúp rút hết số dư trước khi xoá.</span>
             <span onClick="{{ armDelete }}" style="align-self:flex-start; padding:11px 16px; border-radius:12px; border:1.5px solid #A63310; background:{{ pfDelBg }}; color:{{ pfDelFg }}; font:700 13px/1 'Be Vietnam Pro'; cursor:pointer;">{{ pfDelLabel }}</span>
           </div>
         </div>
@@ -933,8 +930,8 @@ class Component extends DCLogic {
     const sel = deals[s.selDeal];
     const related = deals.filter((_, i) => i !== s.selDeal).slice(0, 4);
     const vouchers = [
-      ['0đ','Shopee','Voucher 0đ — giảm 50K','Đơn từ 0đ · mở 12:00 hôm nay',38],['-15%','Shopee','Giảm 15% tối đa 100K','Ngành điện tử · HSD 30/09',72],['Freeship','TikTok Shop','Freeship Xtra toàn sàn','Đơn từ 99K · không giới hạn lượt',91],
-      ['-50K','TikTok Shop','Giảm 50K đơn từ 299K','Làm đẹp · HSD 15/09',55],['-8%','Shopee','Hoàn xu 8% tối đa 40K','Toàn sàn · mở 20:00',80],['0đ','Shopee','Voucher 0đ — giảm 30K','Đơn từ 0đ · mở 21:00',12],
+      ['+20K','Thưởng salevề','+20.000đ cho đơn đầu tiên','Đơn từ 100K · HSD 31/12',96],['x2','Thưởng salevề','Gấp đôi tiền hoàn, tối đa 50K','Đơn từ 300K · chỉ ngày 9.9',38],['+5%','Thưởng salevề','Thêm 5% tiền hoàn, tối đa 30K','Đơn từ 200K · HSD 30/09',72],
+      ['+10K','Thưởng salevề','+10.000đ tiền hoàn','Đơn từ 150K · HSD 15/09',55],['+30K','Thưởng salevề','+30.000đ cho đơn từ 1 triệu','Đơn từ 1.000K · HSD 30/09',80],['+15K','Thưởng salevề','+15.000đ tiền hoàn','Đơn từ 250K · HSD 20/09',12],
     ].map(([tag, san, title, sub, pct], i) => ({ tag, san, title, sub, pctCss: pct + '%', left: 'Còn ' + pct + '%',
       // chữ dài như "Freeship" phải nhỏ lại để vừa cột 76px, không tràn hoặc bẻ dòng xấu
       tagSize: tag.length > 5 ? '14px' : (tag.length > 3 ? '19px' : '24px'),
@@ -946,10 +943,10 @@ class Component extends DCLogic {
       // CHỈ voucher đang mở (i===0) dùng cam đặc; còn lại cuống đào nhạt chữ cam đậm
       stemBg: i === 0 ? '#FF5A1F' : '#FFE1D2', stemFg: i === 0 ? '#fff' : '#A63310',
       stemDot: i === 0 ? '#fff' : '#FBF7F0',
-      save: () => { this.setState({ saved: { ...s.saved, [i]: !s.saved[i] } }); this.toast(s.saved[i] ? 'Đã bỏ lưu voucher' : 'Đã lưu voucher — tự áp khi mua qua link'); } }));
+      save: () => { this.setState({ saved: { ...s.saved, [i]: !s.saved[i] } }); this.toast(s.saved[i] ? 'Đã bỏ lưu voucher' : 'Đã lưu voucher — thưởng tự cộng khi đơn đủ điều kiện'); } }));
     const posts = [
       ['blog-1','img/blog-1.jpg','Sale 9.9','4 phút đọc · hôm nay','Lịch săn voucher 9.9: khung giờ nào mã nhiều nhất?','Tổng hợp các khung 0h, 9h, 12h, 21h và mã nên lưu trước từ tối hôm trước.'],
-      ['blog-2','img/blog-2.jpg','Voucher 0đ','3 phút đọc · 2 ngày trước','Cách canh voucher 0đ không bị trượt trên điện thoại','Tắt tiết kiệm pin, mở sẵn trang voucher, bật nhắc trên salevề trước 5 phút.'],
+      ['blog-2','img/blog-2.jpg','Voucher 0đ','3 phút đọc · 2 ngày trước','Cách canh voucher 0đ không bị trượt trên điện thoại','Tắt tiết kiệm pin, mở sẵn trang voucher của Shopee, đặt báo thức trước 5 phút.'],
       ['blog-3','img/blog-3.jpg','Hoàn tiền','5 phút đọc · tuần này','Tách đơn thế nào để vừa dùng mã shop vừa được hoàn X2','Ví dụ thật với đơn 890K: tách 2 đơn lợi hơn 31.000đ so với gộp.'],
       ['blog-4','img/blog-4.jpg','Lịch sale','2 phút đọc · tuần trước','Lịch sale tháng 9–10: 9.9, 15.9, 10.10 và ngày lương','Ngày nào X2 hoàn tiền, ngày nào chỉ freeship — đánh dấu sẵn lịch.'],
     ].map(([img, src, tag, meta, title, desc], i) => ({ img, src, tag, meta, title, desc, open: () => this.set({ page: 'tipDetail', selPost: i }) }));
@@ -960,24 +957,24 @@ class Component extends DCLogic {
       { h: 'Đừng quên bước hoàn tiền', p: 'Mở link từ salevề rồi mới bấm mua. Nếu bạn đã mở app sàn trước đó, thoát hẳn rồi vào lại từ link — đây là lỗi mất hoàn tiền phổ biến nhất.' },
     ];
     const steps = [
-      { n: '01', t: 'Săn deal hot', d: 'Deal hoàn cao, voucher 0đ cập nhật mỗi ngày.' },
+      { n: '01', t: 'Săn deal hot', d: 'Deal hoàn cao và voucher thưởng cập nhật mỗi ngày.' },
       { n: '02', t: 'Nhận hoàn tiền', d: 'Mỗi đơn hợp lệ đều tích tiền về ví.' },
       { n: '03', t: 'Rút tiền, đổi voucher', d: 'Rút về ngân hàng hoặc đổi ưu đãi ngay trong tài khoản.' },
     ];
     const rules = ['Mở link từ salevề rồi mua trong cùng phiên, không thoát app giữa chừng', 'Xóa giỏ hàng cũ trước khi bấm link, thêm sản phẩm sau khi vào từ link', 'Thanh toán và nhận hàng thành công, không hủy / trả hàng', 'Đơn ghi nhận trong 24–48h — kiểm tra ở mục Đơn hàng'];
     const noRules = ['Mua qua livestream, video hoặc link của người khác sau khi đã mở link', 'Dùng mã hoàn xu / voucher shop khiến hoa hồng về 0', 'Đơn bị hủy, hoàn tiền, trả hàng một phần', 'Ngành hàng sàn không trả hoa hồng (sim, thẻ cào, vàng…)'];
     const sanFilters = [{ name: 'Shopee', count: '1.284' }, { name: 'TikTok Shop', count: '498' }].map((f, i) => ({ ...f, bg: s.san === i ? '#FFE1D2' : '#FFE1D2', pick: () => this.setState({ san: s.san === i ? -1 : i }) }));
-    const dealTypes = ['Hoàn tiền cao', 'Voucher 0đ', 'Flash sale đang chạy', 'Freeship Xtra'].map((name, i) => ({ name, bg: s.types[i] ? '#2A211B' : '#fff', bd: s.types[i] ? '#2A211B' : '#D9CFC3', pick: () => { const t = [...s.types]; t[i] = !t[i]; this.setState({ types: t }); } }));
+    const dealTypes = ['Hoàn tiền cao', 'Bán chạy', 'Flash sale đang chạy', 'Dưới 100K'].map((name, i) => ({ name, bg: s.types[i] ? '#2A211B' : '#fff', bd: s.types[i] ? '#2A211B' : '#D9CFC3', pick: () => { const t = [...s.types]; t[i] = !t[i]; this.setState({ types: t }); } }));
     const cats = ['Điện gia dụng', 'Làm đẹp', 'Thời trang', 'Mẹ & bé', 'Nhà cửa', 'Điện tử', 'Thể thao', 'Thú cưng'];
     const slots = [{ time: '00:00', label: 'Đã mở · hết mã', bg: '#F1E9DC', fg: '#6B6057' }, { time: '09:00', label: 'Đã mở · còn 12%', bg: '#F1E9DC', fg: '#2A211B' }, { time: '12:00', label: 'Đang mở · lưu ngay', bg: '#FF5A1F', fg: '#fff' }, { time: '20:00', label: s.remind ? 'Sắp mở · đã đặt nhắc ✓' : 'Sắp mở · nhắc tôi', bg: '#fff', fg: '#2A211B' }].map((x, i) => ({ ...x, pick: i === 3 ? () => { this.setState({ remind: !s.remind }); this.toast(s.remind ? 'Đã tắt nhắc' : 'Sẽ nhắc bạn lúc 19:55'); } : () => this.toast(i === 2 ? 'Đang mở — lưu voucher bên dưới' : 'Khung giờ này đã qua') }));
     const stages = [
-      { n: '1', t: 'Đã ghi nhận', d: '24–48h (TikTok Shop 15–30′)', bg: '#2F5D50', fg: '#fff' }, { n: '2', t: 'Chờ sàn duyệt', d: 'Sau khi qua hạn đổi trả · xem ngày dự kiến ở từng đơn', bg: '#DDEBE4', fg: '#2F5D50' },
-      { n: '3', t: 'Có thể rút', d: 'Vào số dư khả dụng', bg: '#DDEBE4', fg: '#2F5D50' }, { n: '4', t: 'Đã về tài khoản', d: 'Xử lý rút dưới 24h', bg: '#DDEBE4', fg: '#2F5D50' },
+      { n: '1', t: 'Đã ghi nhận', d: '24–48h (TikTok Shop 15–30′)', bg: '#2F5D50', fg: '#fff' }, { n: '2', t: 'Chờ sàn duyệt', d: 'Sau khi qua hạn đổi trả', bg: '#DDEBE4', fg: '#2F5D50' },
+      { n: '3', t: 'Có thể rút', d: 'Rút về ngân hàng từ 50.000đ', bg: '#DDEBE4', fg: '#2F5D50' }, { n: '4', t: 'Đã về tài khoản', d: 'Theo dõi ở Lịch sử rút', bg: '#DDEBE4', fg: '#2F5D50' },
     ];
     const ST = { pend: { status: 'Chờ duyệt', bg: '#FFE1D2', fg: '#A63310', amtColor: '#A63310' }, done: { status: 'Đã về ví', bg: '#DDEBE4', fg: '#2F5D50', amtColor: '#2F5D50' }, rej: { status: 'Bị từ chối · đơn hủy', bg: '#F1E9DC', fg: '#6B6057', amtColor: '#6B6057' } };
     const orders = [
-      ['Máy hút bụi cầm tay không dây mini','img/tile-1.jpg','Shopee','2409A7K1','07/09/2026','pend','Dự kiến 12/10','+17.600đ','259.000đ'],
-      ['Serum B5 phục hồi da 30ml','img/tile-6.jpg','TikTok Shop','TT58…0F2','05/09/2026','pend','Dự kiến 24/09','+28.300đ','189.000đ'],
+      ['Máy hút bụi cầm tay không dây mini','img/tile-1.jpg','Shopee','2409A7K1','07/09/2026','pend','Chờ sàn duyệt','+17.600đ','259.000đ'],
+      ['Serum B5 phục hồi da 30ml','img/tile-6.jpg','TikTok Shop','TT58…0F2','05/09/2026','pend','Chờ sàn duyệt','+28.300đ','189.000đ'],
       ['Tai nghe bluetooth chống ồn','img/tile-5.jpg','Shopee','2408K5…','21/08/2026','done','Về ví 06/09','+21.400đ','429.000đ'],
       ['Bộ nồi inox 3 đáy 5 món','img/tile-3.jpg','Shopee','2408Q2…','18/08/2026','done','Về ví 02/09','+37.100đ','619.000đ'],
       ['Áo thun cotton unisex','img/tile-4.jpg','Shopee','2408M9…','12/08/2026','rej','Hủy 14/08','0đ','99.000đ'],
@@ -993,7 +990,7 @@ class Component extends DCLogic {
     const orderStages = orderOnlyStages.map((x, i) => ({
       ...x,
       when: i === 0 ? selOrder.date
-          : i === 1 ? (orderIdx >= 1 ? 'Đang chờ · ' + selOrder.etaLabel : '—')
+          : i === 1 ? (orderIdx >= 1 ? (selOrder.st === 'pend' ? 'Đang chờ' : selOrder.etaLabel) : '—')
           : (i <= orderIdx ? selOrder.etaLabel : '—'),
       // Bước ĐÃ XONG: nền xanh tiền, dấu tích. Bước ĐANG Ở: cam đặc (duy nhất).
       // Bước chưa tới: nền trung tính. Nhánh từ chối dùng xám, không dùng cam.
@@ -1019,26 +1016,29 @@ class Component extends DCLogic {
       ['Vietcombank · **** 4821','15/08/2026 · 21:03','RT-2490','Đã về tài khoản','350.000đ','#DDEBE4','#2F5D50'],['MoMo · 0912***482','02/08/2026 · 08:15','RT-2418','Đã về tài khoản','1.200.000đ','#DDEBE4','#2F5D50'],['Vietcombank · **** 4821','20/07/2026 · 12:30','RT-2377','Đã về tài khoản','1.000.000đ','#DDEBE4','#2F5D50'],
     ].map(([bank, date, code, status, amt, bg, fg]) => ({ bank, date, code, status, amt, bg, fg }));
     const faq = [
-      ['Bao lâu thì tiền về ví?', 'Đơn được ghi nhận sau 24–48h (TikTok Shop 15–30 phút). Sau đó phải chờ bạn nhận hàng và hết hạn đổi trả thì sàn mới chốt hoa hồng — mỗi sàn và mỗi ngành hàng một khác. Ngày dự kiến của riêng đơn bạn hiện ở mục Đơn hàng, và tiền chuyển sang "Có thể rút" ngay khi sàn chốt.'],
-      ['Tại sao mức hoàn mỗi sản phẩm khác nhau?', 'Mỗi ngành hàng sàn trả hoa hồng khác nhau (ví dụ điện gia dụng 8,5%, làm đẹp 15%). Bạn nhận 80% khoản đó ở hạng Bạc, 85% ở hạng Vàng.'],
+      ['Bao lâu thì tiền về ví?', 'Đơn được ghi nhận sau 24–48h (TikTok Shop 15–30 phút). Sau đó phải chờ bạn nhận hàng và hết hạn đổi trả thì sàn mới chốt hoa hồng — mỗi sàn và mỗi ngành hàng một khác. Tiền chuyển sang "Có thể rút" ngay khi sàn duyệt đơn.'],
+      ['Tại sao mức hoàn mỗi sản phẩm khác nhau?', 'Mỗi ngành hàng sàn trả hoa hồng khác nhau (ví dụ điện gia dụng 8,5%, làm đẹp 15%). Bạn nhận 80% khoản đó.'],
       ['Tôi mua rồi mà không thấy đơn?', 'Vào Đơn hàng › "Đơn chưa được ghi nhận", gửi mã đơn và ngày đặt. Tụi mình đối soát với sàn trong 1–3 ngày làm việc.'],
       ['Có mất phí gì không?', 'Không. Giá bạn trả y như trên sàn, rút tiền không mất phí, tối thiểu 50.000đ.'],
+      ['Có sản phẩm không được hoàn không?', 'Có. Một số sản phẩm sàn không trả hoa hồng, trang kiểm tra sẽ báo "Sản phẩm này hoa hồng 0đ". Bạn vẫn mua qua link được, chỉ là không có tiền hoàn.'],
+      ['Vì sao đơn của tôi không được ghi nhận?', 'Sàn chỉ tính đơn cho link giới thiệu được bấm cuối cùng. Sau khi bấm link salevề, đừng bấm link giới thiệu của trang khác trước khi mua.'],
+      ['Voucher thưởng là gì?', 'Voucher của salevề, cộng thêm tiền hoàn vào ví khi đơn đủ điều kiện. Bấm Lưu trước khi mua; thưởng về ví cùng lúc với tiền hoàn của đơn.'],
       ['Dùng voucher của shop có còn được hoàn không?', 'Có, tiền hoàn tính trên giá sau voucher. Riêng mã hoàn xu của sàn có thể làm hoa hồng về 0 — tụi mình cảnh báo ngay trên trang kiểm tra.'],
       ['Có hỗ trợ Lazada không?', 'Chưa. Hiện hỗ trợ Shopee và TikTok Shop; sàn mới sẽ được thông báo trong app.'],
     ].map(([q, a], i) => ({ q, a, open: s.faqOpen === i, sign: s.faqOpen === i ? '−' : '+', toggle: () => this.setState({ faqOpen: s.faqOpen === i ? -1 : i }) }));
-    const refStats = [{ l: 'Bạn đã mời', v: '7' }, { l: 'Đã có đơn đầu', v: '4' }, { l: 'Thưởng nhận được', v: '80.000đ' }];
+    const refStats = [{ l: 'Bạn đã mời', v: '7' }, { l: 'Đã có đơn đầu', v: '4' }, { l: 'Chưa có đơn', v: '3' }];
     const invited = [
-      ['M','Minh T.','Đã mời 05/09','Đã nhận thưởng','+20.000đ','#DDEBE4','#2F5D50'],['H','Hà N.','Đã mời 03/09','Chờ đơn đầu duyệt','+20.000đ','#FFE1D2','#A63310'],['L','Linh P.','Đã mời 28/08','Đã nhận thưởng','+20.000đ','#DDEBE4','#2F5D50'],['Q','Quân D.','Đã mời 20/08','Chưa có đơn','—','#F1E9DC','#6B6057'],
+      ['M','Minh T.','Đã mời 05/09','Đã có đơn đầu','','#DDEBE4','#2F5D50'],['H','Hà N.','Đã mời 03/09','Đơn đầu chờ sàn duyệt','','#FFE1D2','#A63310'],['L','Linh P.','Đã mời 28/08','Đã có đơn đầu','','#DDEBE4','#2F5D50'],['Q','Quân D.','Đã mời 20/08','Chưa có đơn','','#F1E9DC','#6B6057'],
     ].map(([ini, name, when, status, amt, bg, fg]) => ({ ini, name, when, status, amt, bg, fg }));
     const notis = [
       // Trước: 6 ký tự (đ X2 ✓ 0đ ↑ +) trong 6 ô pastel khác màu — sáu hình học và
       // sáu màu cạnh nhau. Nay cùng một hệ icon nét, màu chỉ phân biệt LOẠI việc.
       ['wallet','Tiền hoàn đã về ví','+21.400đ từ đơn Tai nghe bluetooth (Shopee) đã có thể rút.','2 giờ trước',true,'#2F5D50','wallet'],
       ['tag','Siêu sale 9.9 — X2 hoàn tiền','Đơn chốt qua salevề hôm nay được nhân đôi tiền hoàn. Kết thúc 23:59.','Hôm nay 00:05',true,'#A63310','deals'],
-      ['receipt','Đơn 2409A7K1 đã ghi nhận','Máy hút bụi cầm tay — dự kiến duyệt 12/10.','Hôm qua',false,'#5B4F45','orderDetail'],
-      ['clock','Voucher 0đ mở lúc 12:00','Bạn đã bật nhắc. Mở trang voucher trước 5 phút để không trượt.','Hôm qua',false,'#A63310','vouchers'],
+      ['receipt','Đơn 2409A7K1 đã ghi nhận','Máy hút bụi cầm tay — đang chờ sàn duyệt.','Hôm qua',false,'#5B4F45','orderDetail'],
+      ['clock','Voucher gấp đôi tiền hoàn ngày 9.9','Lưu voucher trước khi mua để được nhân đôi tiền hoàn.','Hôm qua',false,'#A63310','vouchers'],
       ['bank','Rút 800.000đ thành công','Đã về Vietcombank **** 4821.','28/08',false,'#2F5D50','withdrawals'],
-      ['gift','Minh T. đã mua đơn đầu','Thưởng 20.000đ sẽ về ví khi đơn được duyệt.','25/08',false,'#5B4F45','referral'],
+      ['gift','Voucher thưởng mới','+20.000đ cho đơn đầu tiên từ 100K. Lưu ngay để không bỏ lỡ.','25/08',false,'#5B4F45','vouchers'],
     ].map(([ic, title, body, when, unread0, fg, target]) => { const unread = unread0 && !s.readAll;
       return { d: this.iconMask(ic), title, body, when, unread, fg, rowBg: unread ? '#FFFBF7' : '#fff', go: go[target] }; });
     // Gom 9 mục rời thành 3 nhóm theo công việc: tiền & đơn / tài khoản / hỗ trợ.
@@ -1056,7 +1056,7 @@ class Component extends DCLogic {
         ['bell','Thông báo','2 chưa đọc','notifications'],
       ]],
       ['Ưu đãi và hỗ trợ', [
-        ['gift','Mời bạn bè','Đã mời 7 · nhận 80.000đ','referral'],
+        ['gift','Mời bạn bè','Đã mời 7 bạn','referral'],
         ['help','Cách hoàn tiền / FAQ','Điều kiện, thời gian','howto'],
       ]],
     ].map(([title, rows]) => ({ title, rows: rows.map(([ic, label, sub, target], i) => ({
@@ -1091,7 +1091,7 @@ class Component extends DCLogic {
       justWithdrew: s.justWithdrew, lastWithdrawText: (s.lastWithdraw || 0).toLocaleString('vi-VN'),
       wBtnBg: (s.amount >= 50000 && s.amount <= 1240000) ? '#C84318' : '#EFE7DB',
       wBtnFg: (s.amount >= 50000 && s.amount <= 1240000) ? '#fff' : '#575046',
-      wHint: s.amount < 50000 ? 'Tối thiểu 50.000đ' : (s.amount > 1240000 ? 'Vượt số dư khả dụng' : ''),
+      wHint: s.amount < 50000 ? 'Tối thiểu 50.000đ' : (s.amount > 1240000 ? 'Vượt số tiền có thể rút' : ''),
       quick: [200000, 500000, 1000000].map(v => ({ label: v >= 1000000 ? '1.000K' : (v / 1000) + 'K', bg: s.amount === v ? '#2A211B' : '#FFE1D2', fg: s.amount === v ? '#fff' : '#2A211B', pick: () => this.setState({ amount: v }) })),
       // --- nhập liệu thật. Dùng setState (KHÔNG dùng set(): set() cuộn lên đầu trang mỗi ký tự) ---
       // Mang đúng link vừa dán sang màn kết quả; trước đây nhảy sang link mẫu.
@@ -1165,10 +1165,10 @@ class Component extends DCLogic {
       saveProfile: () => this.toast('Đã lưu hồ sơ'),
       changeAvatar: () => this.toast('Mở thư viện ảnh'),
       pfDelArm: s.pfDelArm,
-      pfDelLabel: s.pfDelArm ? 'Bấm lần nữa để xoá vĩnh viễn' : 'Xoá tài khoản của tôi',
+      pfDelLabel: 'Liên hệ hỗ trợ',
       pfDelBg: s.pfDelArm ? '#A63310' : 'transparent',
       pfDelFg: s.pfDelArm ? '#fff' : '#A63310',
-      armDelete: () => { if (s.pfDelArm) { this.set({ page: 'login', loggedIn: false }); this.toast('Yêu cầu xoá tài khoản đã được ghi nhận'); } else { this.setState({ pfDelArm: true }); this.toast('Xác nhận lần nữa để xoá'); } },
+      armDelete: () => { this.toast('Đã mở hỗ trợ — tụi mình phản hồi trong giờ làm việc'); },
       // ===== màn 20: cài đặt thông báo =====
       notifRows: [['Deal hot & voucher mới','Khi có deal hoàn cao hoặc mã 0đ'],['Sản phẩm theo dõi giảm giá','Báo ngay khi giá xuống'],['Đơn được ghi nhận','Khi sàn xác nhận đơn của bạn'],['Tiền hoàn được duyệt','Khi tiền chuyển sang có thể rút'],['Lệnh rút đã chuyển khoản','Khi ngân hàng nhận được tiền'],['Tin khuyến mãi từ salevề','Chương trình, sự kiện, khảo sát']].map(([label, sub], i) => ({ label, sub, on: s.notifPrefs[i],
         knobBg: s.notifPrefs[i] ? '#FF5A1F' : '#EFE7DB', knobX: s.notifPrefs[i] ? '20px' : '2px',
@@ -1247,7 +1247,7 @@ class Component extends DCLogic {
           // Ngưỡng tối thiểu 50.000đ, trần = số dư khả dụng. Trước đây rút 1đ vẫn báo
           // thành công dù giao diện ghi tối thiểu 50.000đ.
           if (s.amount < 50000) { this.toast('Số tiền rút tối thiểu là 50.000đ'); return; }
-          if (s.amount > 1240000) { this.toast('Vượt quá số dư khả dụng'); return; }
+          if (s.amount > 1240000) { this.toast('Vượt quá số tiền có thể rút'); return; }
           this.setState({ justWithdrew: true, lastWithdraw: s.amount });
           this.set({ page: 'withdrawals' });
           this.toast('Đã tạo lệnh rút ' + s.amount.toLocaleString('vi-VN') + 'đ');
