@@ -208,7 +208,7 @@ window.__resources = {
                 <div style="display:flex; justify-content:space-between; gap:10px; padding:11px 14px; border-bottom:1px solid #F2ECE4;"><span style="color:#6B6057;">Tính trên giá sau voucher</span><b style="color:#A63310;">≈ 17.600đ</b></div>
                 <div style="display:flex; justify-content:space-between; gap:10px; padding:11px 14px;"><span style="color:#6B6057;">Voucher thưởng đã lưu · đơn đầu tiên</span><b style="color:#2F5D50;">+20.000đ</b></div>
               </div>
-              <span style="font:400 12px/1.5 'Be Vietnam Pro'; color:#6B6057;">Đơn ghi nhận sau 24–48h · Rút được sau khi sàn duyệt.</span>
+              <span style="font:400 12px/1.5 'Be Vietnam Pro'; color:#6B6057;">Đơn ghi nhận sau 24–48h · Rút được sau khi sàn chốt hoa hồng.</span>
             </div>
           </div>
           <div style="display:grid; grid-template-columns:var(--cols2); gap:16px;">
@@ -645,7 +645,7 @@ window.__resources = {
 
           <div style="border-radius:18px; background:#fff; border:1.5px solid #FFE1D2; padding:18px; display:flex; flex-direction:column; gap:10px;">
             <span style="font:700 15px/1.3 'Bricolage Grotesque'; color:#A63310;">Xoá tài khoản</span>
-            <span style="font:400 13px/1.5 'Be Vietnam Pro'; color:#6B6057;">Muốn xoá tài khoản, bạn liên hệ hỗ trợ. Tụi mình sẽ giúp rút hết số dư trước khi xoá.</span>
+            <span style="font:400 13px/1.5 'Be Vietnam Pro'; color:#6B6057;">Xoá được khi mọi đơn đã xong. Còn tiền thì bạn rút hết, kể cả dưới 50.000đ, rồi tài khoản mới được xoá.</span>
             <span onClick="{{ armDelete }}" style="align-self:flex-start; padding:11px 16px; border-radius:12px; border:1.5px solid #A63310; background:{{ pfDelBg }}; color:{{ pfDelFg }}; font:700 13px/1 'Be Vietnam Pro'; cursor:pointer;">{{ pfDelLabel }}</span>
           </div>
         </div>
@@ -1016,7 +1016,7 @@ class Component extends DCLogic {
       ['Vietcombank · **** 4821','15/08/2026 · 21:03','RT-2490','Đã về tài khoản','350.000đ','#DDEBE4','#2F5D50'],['MoMo · 0912***482','02/08/2026 · 08:15','RT-2418','Đã về tài khoản','1.200.000đ','#DDEBE4','#2F5D50'],['Vietcombank · **** 4821','20/07/2026 · 12:30','RT-2377','Đã về tài khoản','1.000.000đ','#DDEBE4','#2F5D50'],
     ].map(([bank, date, code, status, amt, bg, fg]) => ({ bank, date, code, status, amt, bg, fg }));
     const faq = [
-      ['Bao lâu thì tiền về ví?', 'Đơn được ghi nhận sau 24–48h (TikTok Shop 15–30 phút). Sau đó phải chờ bạn nhận hàng và hết hạn đổi trả thì sàn mới chốt hoa hồng — mỗi sàn và mỗi ngành hàng một khác. Tiền chuyển sang "Có thể rút" ngay khi sàn duyệt đơn.'],
+      ['Bao lâu thì tiền về ví?', 'Đơn được ghi nhận sau 24–48h (TikTok Shop 15–30 phút). Sau đó phải chờ bạn nhận hàng và hết hạn đổi trả thì sàn mới chốt hoa hồng — mỗi sàn và mỗi ngành hàng một khác. Tiền chuyển sang "Có thể rút" khi sàn chốt hoa hồng của đơn, thường theo kỳ.'],
       ['Tại sao mức hoàn mỗi sản phẩm khác nhau?', 'Mỗi ngành hàng sàn trả hoa hồng khác nhau (ví dụ điện gia dụng 8,5%, làm đẹp 15%). Bạn nhận 80% khoản đó.'],
       ['Tôi mua rồi mà không thấy đơn?', 'Vào Đơn hàng › "Đơn chưa được ghi nhận", gửi mã đơn và ngày đặt. Tụi mình đối soát với sàn trong 1–3 ngày làm việc.'],
       ['Có mất phí gì không?', 'Không. Giá bạn trả y như trên sàn, rút tiền không mất phí, tối thiểu 50.000đ.'],
@@ -1165,10 +1165,10 @@ class Component extends DCLogic {
       saveProfile: () => this.toast('Đã lưu hồ sơ'),
       changeAvatar: () => this.toast('Mở thư viện ảnh'),
       pfDelArm: s.pfDelArm,
-      pfDelLabel: 'Liên hệ hỗ trợ',
+      pfDelLabel: s.emptyDemo ? (s.pfDelArm ? 'Bấm lần nữa để xoá vĩnh viễn' : 'Xoá tài khoản của tôi') : 'Chưa xoá được · còn 4 đơn chờ',
       pfDelBg: s.pfDelArm ? '#A63310' : 'transparent',
       pfDelFg: s.pfDelArm ? '#fff' : '#A63310',
-      armDelete: () => { this.toast('Đã mở hỗ trợ — tụi mình phản hồi trong giờ làm việc'); },
+      armDelete: () => { if (!s.emptyDemo) { this.toast('Còn 4 đơn chờ sàn duyệt — xoá được khi các đơn xong'); return; } if (s.pfDelArm) { this.set({ page: 'login', loggedIn: false }); this.toast('Đã xoá tài khoản'); } else { this.setState({ pfDelArm: true }); this.toast('Xác nhận lần nữa để xoá'); } },
       // ===== màn 20: cài đặt thông báo =====
       notifRows: [['Deal hot & voucher mới','Khi có deal hoàn cao hoặc mã 0đ'],['Sản phẩm theo dõi giảm giá','Báo ngay khi giá xuống'],['Đơn được ghi nhận','Khi sàn xác nhận đơn của bạn'],['Tiền hoàn được duyệt','Khi tiền chuyển sang có thể rút'],['Lệnh rút đã chuyển khoản','Khi ngân hàng nhận được tiền'],['Tin khuyến mãi từ salevề','Chương trình, sự kiện, khảo sát']].map(([label, sub], i) => ({ label, sub, on: s.notifPrefs[i],
         knobBg: s.notifPrefs[i] ? '#FF5A1F' : '#EFE7DB', knobX: s.notifPrefs[i] ? '20px' : '2px',
