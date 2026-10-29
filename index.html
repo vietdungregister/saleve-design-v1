@@ -194,16 +194,15 @@ window.__resources = {
           <div style="display:grid; grid-template-columns:var(--checkCols); border-radius:24px; background:#fff; overflow:hidden; align-items:start;">
             <div style="padding:24px; display:flex; gap:16px; border-right:1px solid #EFE7DB; align-self:stretch;">
               <img src="img/tile-1.jpg" alt="" style="width:96px; height:96px; border-radius:12px; object-fit:cover; flex-shrink:0; background:#F1E9DC;">
-              <div style="display:flex; flex-direction:column; gap:6px; min-width:0;"><span style="font:600 11px/1 'Be Vietnam Pro'; color:#6B6057; letter-spacing:.06em; text-transform:uppercase;">Đã nhận diện</span><span style="font:600 15px/1.4 'Be Vietnam Pro';">Máy hút bụi cầm tay không dây mini 2 trong 1, pin 2000mAh</span><span style="font:700 22px/1.2 'Bricolage Grotesque'; font-variant-numeric:tabular-nums;">259.000đ</span><span style="font:400 12px/1.3 'Be Vietnam Pro'; color:#6B6057;">HomeTech Official · Điện gia dụng</span></div>
+              <div style="display:flex; flex-direction:column; gap:6px; min-width:0;"><span style="font:600 11px/1 'Be Vietnam Pro'; color:#6B6057; letter-spacing:.06em; text-transform:uppercase;">Sản phẩm · Shopee</span><span style="font:600 15px/1.4 'Be Vietnam Pro';">Máy hút bụi cầm tay không dây mini 2 trong 1, pin 2000mAh</span><span style="font:700 22px/1.2 'Bricolage Grotesque'; font-variant-numeric:tabular-nums;">259.000đ</span><span style="font:400 12px/1.3 'Be Vietnam Pro'; color:#6B6057;">HomeTech Official · Điện gia dụng</span></div>
             </div>
             <div style="padding:24px; background:#FFE1D2; display:flex; flex-direction:column; gap:14px;">
               <div style="display:flex; flex-direction:column; gap:4px;"><span style="font:600 11px/1 'Be Vietnam Pro'; color:#A63310; letter-spacing:.06em; text-transform:uppercase;">Hoàn tiền dự kiến</span><div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;"><span style="font:700 40px/1.1 'Bricolage Grotesque'; color:#A63310; letter-spacing:-.03em; font-variant-numeric:tabular-nums;">≈ 17.600đ</span><span style="font:600 14px/1 'Be Vietnam Pro'; color:#A63310;">6,8% giá đơn</span></div></div>
-              <span style="font:400 12px/1.5 'Be Vietnam Pro'; color:#5B4F45;">Mở sàn từ đây rồi mua trong cùng phiên. Đơn bị hủy hoặc trả hàng sẽ không được hoàn.</span>
+              <span style="font:400 12px/1.5 'Be Vietnam Pro'; color:#5B4F45;">Tính trên giá sau voucher. Đơn bị hủy hoặc trả hàng sẽ không được hoàn. Mở sàn từ đây rồi mua trong cùng phiên.</span>
               <!-- CTA đứng TRƯỚC bảng cách tính: trước đây bảng ba dòng đẩy nút mua
                    xuống dưới vùng nhìn đầu trên điện thoại. -->
               <div style="display:flex; gap:8px; flex-wrap:wrap;"><span onClick="{{ go.orders }}" style="flex:1 1 180px; height:52px; border-radius:14px; background:#C84318; color:#fff; font:700 15px/1 'Be Vietnam Pro'; display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer;">Mở Shopee &amp; mua ngay<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M14 4h6v6M20 4l-8 8"></path></svg></span><span onClick="{{ act.copy }}" style="height:52px; padding:0 18px; border-radius:14px; background:#fff; color:#5B4F45; font:600 14px/1 'Be Vietnam Pro'; display:grid; place-items:center; border:1px solid #EFE7DB; cursor:pointer;" style-hover="background:#F1E9DC;">Sao chép link</span></div>
               <div style="display:flex; flex-direction:column; border-radius:12px; background:#fff; overflow:hidden; font:500 13px/1 'Be Vietnam Pro';">
-                <div style="display:flex; justify-content:space-between; gap:10px; padding:11px 14px; border-bottom:1px solid #F2ECE4;"><span style="color:#6B6057;">Tính trên giá sau voucher</span><b style="color:#A63310;">≈ 17.600đ</b></div>
                 <div style="display:flex; justify-content:space-between; gap:10px; padding:11px 14px;"><span style="color:#6B6057;">Voucher thưởng đã lưu · đơn đầu tiên</span><b style="color:#2F5D50;">+20.000đ</b></div>
               </div>
               <span style="font:400 12px/1.5 'Be Vietnam Pro'; color:#6B6057;">Đơn ghi nhận sau 24–48h · Rút được sau khi sàn duyệt đơn.</span>
@@ -425,7 +424,7 @@ window.__resources = {
               <div style="display:flex; justify-content:space-between; padding-top:8px; border-top:1px dashed #FFCDB8;"><span style="font-weight:700;">Tiền hoàn</span><b style="font:700 20px/1.2 'Bricolage Grotesque'; color:{{ selOrder.amtColor }};">{{ selOrder.amt }}</b></div>
             </div>
           </div>
-          <div style="display:flex; gap:8px; flex-wrap:wrap;"><span onClick="{{ go.deals }}" style="flex:1 1 160px; height:48px; border-radius:12px; background:#C84318; color:#fff; font:700 14px/1 'Be Vietnam Pro'; display:grid; place-items:center; cursor:pointer;">Mua lại qua link</span><span onClick="{{ go.complaint }}" style="flex:1 1 160px; height:48px; border-radius:12px; background:#fff; border:1px solid #2A211B; font:700 14px/1 'Be Vietnam Pro'; display:grid; place-items:center; cursor:pointer;">Khiếu nại đơn này</span></div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;"><span onClick="{{ go.check }}" style="flex:1 1 160px; height:48px; border-radius:12px; background:#C84318; color:#fff; font:700 14px/1 'Be Vietnam Pro'; display:grid; place-items:center; cursor:pointer;">Mua lại</span><span onClick="{{ go.complaint }}" style="flex:1 1 160px; height:48px; border-radius:12px; background:#fff; border:1px solid #2A211B; font:700 14px/1 'Be Vietnam Pro'; display:grid; place-items:center; cursor:pointer;">Khiếu nại đơn này</span></div>
         </div>
       </div></sc-if>
 
@@ -625,7 +624,8 @@ window.__resources = {
             </div>
             <div style="display:flex; flex-direction:column; gap:7px;">
               <span style="font:600 11px/1 'Be Vietnam Pro'; color:#6B6057;">Tên hiển thị</span>
-              <div style="display:flex; align-items:center; height:52px; padding:0 14px; border-radius:14px; border:1.5px solid #EFE7DB; background:#fff;"><input value="{{ pfName }}" onInput="{{ onPfName }}" placeholder="Tên của bạn" style="flex:1; min-width:0; border:none; outline:none; background:transparent; font:500 15px/1 'Be Vietnam Pro'; color:#2A211B;" /></div>
+              <div style="display:flex; align-items:center; height:52px; padding:0 14px; border-radius:14px; border:1.5px solid #EFE7DB; background:#F7F2EA;"><input value="{{ pfName }}" readonly aria-readonly="true" placeholder="Tên của bạn" style="flex:1; min-width:0; border:none; outline:none; background:transparent; font:500 15px/1 'Be Vietnam Pro'; color:#5B4F45;" /></div>
+              <span style="font:400 12px/1.5 'Be Vietnam Pro'; color:#6B6057;">Tên đã dùng để xác minh tài khoản ngân hàng. Muốn đổi, vui lòng liên hệ hỗ trợ.</span>
             </div>
             <div style="display:flex; flex-direction:column; gap:7px;">
               <span style="font:600 11px/1 'Be Vietnam Pro'; color:#6B6057;">Email nhận mã OTP</span>
@@ -639,11 +639,7 @@ window.__resources = {
             <span onClick="{{ saveProfile }}" style="height:52px; border-radius:14px; font:700 15px/1 'Be Vietnam Pro'; display:flex; align-items:center; justify-content:center; white-space:pre; cursor:pointer; background:#C84318; color:#fff;">Lưu thay đổi</span>
           </div>
 
-          <div style="border-radius:18px; background:#fff; border:1.5px solid #FFE1D2; padding:18px; display:flex; flex-direction:column; gap:10px;">
-            <span style="font:700 15px/1.3 'Bricolage Grotesque'; color:#A63310;">Xoá tài khoản</span>
-            <span style="font:400 13px/1.5 'Be Vietnam Pro'; color:#6B6057;">Xoá được khi mọi đơn đã xong. Còn tiền thì bạn rút hết, kể cả dưới 50.000đ, rồi tài khoản mới được xoá.</span>
-            <span onClick="{{ armDelete }}" style="align-self:flex-start; padding:11px 16px; border-radius:12px; border:1.5px solid #A63310; background:{{ pfDelBg }}; color:{{ pfDelFg }}; font:700 13px/1 'Be Vietnam Pro'; cursor:pointer;">{{ pfDelLabel }}</span>
-          </div>
+          <span style="font:400 13px/1.5 'Be Vietnam Pro'; color:#6B6057; padding:0 4px;">Muốn xoá tài khoản? Vui lòng liên hệ hỗ trợ.</span>
         </div>
       </div></sc-if>
 
@@ -742,7 +738,7 @@ window.__resources = {
               <div style="display:flex; gap:4px; padding:4px; border-radius:99px; background:#FFE1D2;"><span onClick="{{ setModeLogin }}" style="flex:1; padding:9px; border-radius:99px; background:{{ tabLoginBg }}; color:{{ tabLoginFg }}; font:700 13px/1 'Be Vietnam Pro'; text-align:center; cursor:pointer;">Đăng nhập</span><span onClick="{{ setModeRegister }}" style="flex:1; padding:9px; border-radius:99px; background:{{ tabRegBg }}; color:{{ tabRegFg }}; font:700 13px/1 'Be Vietnam Pro'; text-align:center; cursor:pointer;">Đăng ký</span></div>
               <div style="display:flex; align-items:center; gap:10px; height:54px; padding:0 14px; border-radius:14px; border:1px solid #2A211B;"><span style="font:700 14px/1 'Be Vietnam Pro'; color:#6B6057; padding-right:10px; border-right:1px solid #EFE7DB;">+84</span><input value="{{ phone }}" onInput="{{ onPhone }}" placeholder="Số điện thoại" inputMode="numeric" style="flex:1; border:none; outline:none; background:transparent; min-width:0; font:inherit; color:#2A211B; font:500 15px/1 'Be Vietnam Pro';" /></div>
               <sc-if value="{{ isRegister }}" hint-placeholder-val="{{ false }}"><div style="display:flex; align-items:center; gap:10px; height:54px; padding:0 14px; border-radius:14px; border:1px solid #EFE7DB; font:500 14px/1 'Be Vietnam Pro'; color:#6B6057;"><input value="{{ refCode }}" onInput="{{ onRefCode }}" placeholder="Mã giới thiệu (nếu có)" style="flex:1; border:none; outline:none; background:transparent; min-width:0; font:inherit; color:#2A211B;" /></div></sc-if>
-              <span onClick="{{ sendOtp }}" style="height:52px; border-radius:14px; background:#C84318; color:#fff; font:700 15px/1 'Be Vietnam Pro'; display:grid; place-items:center; cursor:pointer;">Nhận mã OTP</span>
+              <span onClick="{{ sendOtp }}" style="height:52px; border-radius:14px; background:#C84318; color:#fff; font:700 15px/1 'Be Vietnam Pro'; display:grid; place-items:center; cursor:pointer;">{{ otpBtnLabel }}</span>
               <div style="display:flex; align-items:center; gap:10px; font:500 12px/1 'Be Vietnam Pro'; color:#6B6057;"><span style="flex:1; height:1px; background:#EFE7DB;"></span>hoặc<span style="flex:1; height:1px; background:#EFE7DB;"></span></div>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;"><span onClick="{{ finishLogin }}" style="height:48px; border-radius:12px; border:1px solid #EFE7DB; font:700 13px/1 'Be Vietnam Pro'; display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer;"><span style="width:18px; height:18px; border-radius:99px; background:conic-gradient(#EA4335 0 25%, #FBBC05 0 50%, #34A853 0 75%, #4285F4 0);"></span>Google</span><span onClick="{{ finishLogin }}" style="height:48px; border-radius:12px; border:1px solid #EFE7DB; font:700 13px/1 'Be Vietnam Pro'; display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer;"><span style="width:18px; height:18px; border-radius:5px; background:#0068FF; color:#fff; font:800 9px/18px 'Be Vietnam Pro'; text-align:center;">Z</span>Zalo</span></div>
               <span style="font:400 11px/1.5 'Be Vietnam Pro'; color:#6B6057; text-align:center;">Tiếp tục là đồng ý <a href="#" style="color:#A63310;">Điều khoản</a> và <a href="#" style="color:#A63310;">Chính sách bảo mật</a>.</span>
@@ -1306,6 +1302,7 @@ class Component extends DCLogic {
       loginTitle: s.loginStep === 'otp' ? 'Nhập mã OTP' : (isRegister ? 'Tạo tài khoản salevề' : 'Chào mừng trở lại'),
       loginSub: s.loginStep === 'otp' ? 'Mã 6 số đã gửi tới 0912 *** 482' : (isRegister ? 'Đăng ký 10 giây, nhận ngay 10.000đ cho đơn đầu.' : 'Đăng nhập để xem ví và đơn hàng của bạn.'),
       tabLoginBg: isRegister ? 'transparent' : '#2A211B', tabLoginFg: isRegister ? '#6B6057' : '#fff', tabRegBg: isRegister ? '#2A211B' : 'transparent', tabRegFg: isRegister ? '#fff' : '#6B6057',
+      otpBtnLabel: isRegister ? 'Nhận mã đăng ký' : 'Nhận mã đăng nhập',
       setModeLogin: () => this.setState({ loginMode: 'login' }), setModeRegister: () => this.setState({ loginMode: 'register' }),
       sendOtp: () => this.setState({ loginStep: 'otp' }, () => this.pushHistory('login', 'otp')), backPhone: () => this.setState({ loginStep: 'phone' }, () => this.pushHistory('login', 'phone')),
       finishLogin: () => this.set({ loggedIn: true, page: 'account', loginStep: 'phone' }),
